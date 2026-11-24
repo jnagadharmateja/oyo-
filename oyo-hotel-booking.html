@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OYO Gateway Inn — Vijayawada | Comfortable stays at honest prices</title>
+<meta name="description" content="OYO Gateway Inn, Benz Circle, Vijayawada. Rooms from ₹999 per night. Free Wi-Fi, breakfast, parking and 24/7 front desk.">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --red:#E10E1E;
+  --red-dark:#B00A15;
+  --ink:#0B0B0B;
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#F7F5F2;
+  --text:#121212;
+  --muted:#5E5B57;
+  --line:rgba(0,0,0,.14);
+  --btn-bg:#0B0B0B;
+  --btn-fg:#FFFFFF;
+  --nav-bg:#E10E1E;
+  --nav-fg:#FFFFFF;
+  --shadow:0 20px 45px -22px rgba(0,0,0,.35);
+  --radius:16px;
+  --serif:"Didot","Bodoni MT","Playfair Display",Georgia,"Times New Roman",serif;
+  --script:"Snell Roundhand","Brush Script MT","Segoe Script",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+html[data-theme="dark"]{
+  --bg:#0D0D0D;
+  --surface:#171717;
+  --surface-2:#1E1E1E;
+  --text:#F3F1EE;
+  --muted:#A8A4A0;
+  --line:rgba(255,255,255,.15);
+  --btn-bg:#F3F1EE;
+  --btn-fg:#0B0B0B;
+  --shadow:0 20px 45px -22px rgba(0,0,0,.75);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{width:min(1160px,92vw);margin-inline:auto}
+section{scroll-margin-top:84px}
+
+/* ============ TYPE HELPERS ============ */
+.eyebrow{
+  font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+}
+.script{
+  font-family:var(--script);font-style:italic;font-weight:400;
+  text-transform:none;letter-spacing:0;
+}
+.serif{font-family:var(--serif)}
+.sec-head{margin-bottom:2.6rem}
+.sec-head .eyebrow{color:var(--red);display:block;margin-bottom:.9rem}
+.sec-title{
+  font-family:var(--serif);font-weight:700;line-height:1.04;
+  font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.01em;
+  text-transform:uppercase;
+}
+.sec-title .script{
+  font-size:1.18em;color:var(--red);margin-inline:.06em;
+  vertical-align:-.06em;
+}
+.sec-sub{color:var(--muted);max-width:56ch;margin-top:1rem;font-size:1.02rem}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  background:var(--btn-bg);color:var(--btn-fg);
+  border:1px solid var(--btn-bg);border-radius:3px;
+  padding:.85rem 1.6rem;font-size:.78rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s,color .2s,border-color .2s,transform .2s;
+}
+.btn:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.btn--ghost{background:transparent;color:var(--text);border-color:var(--text)}
+.btn--ghost:hover{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-fg)}
+.btn--light{background:#fff;color:#0B0B0B;border-color:#fff}
+.btn--light:hover{background:#0B0B0B;border-color:#0B0B0B;color:#fff}
+.btn--full{width:100%}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:var(--nav-bg);color:var(--nav-fg);
+  border-bottom:1px solid rgba(255,255,255,.22);
+}
+.nav__inner{
+  display:flex;align-items:center;gap:1.4rem;
+  padding:.7rem 0;position:relative;
+}
+.brand{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.brand__badge{
+  background:#fff;color:var(--red);
+  font-weight:800;letter-spacing:.06em;font-size:1rem;
+  padding:.34rem .55rem .3rem;border-radius:7px;line-height:1;
+}
+.brand__tag{
+  font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;
+  opacity:.85;font-weight:600;
+}
+.nav__links{
+  display:flex;align-items:center;gap:1.6rem;margin-left:auto;
+}
+.nav__links a{
+  font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  opacity:.92;padding:.35rem 0;border-bottom:2px solid transparent;
+}
+.nav__links a:hover{border-bottom-color:#fff;opacity:1}
+.nav__cta{
+  background:#0B0B0B;color:#fff;border:1px solid #0B0B0B;border-radius:3px;
+  padding:.62rem 1.15rem;font-size:.68rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s,border-color .2s;
+}
+.nav__cta:hover{background:#fff;color:var(--red);border-color:#fff}
+.theme-toggle{
+  background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  cursor:pointer;flex-shrink:0;transition:background .2s;
+}
+.theme-toggle:hover{background:rgba(255,255,255,.15)}
+.theme-toggle svg{width:16px;height:16px}
+.theme-toggle .icon-sun{display:none}
+html[data-theme="dark"] .theme-toggle .icon-sun{display:block}
+html[data-theme="dark"] .theme-toggle .icon-moon{display:none}
+.nav__burger{
+  display:none;background:transparent;border:1px solid rgba(255,255,255,.55);
+  border-radius:3px;width:40px;height:36px;cursor:pointer;margin-left:auto;
+}
+.nav__burger span{display:block;width:18px;height:2px;background:#fff;margin:3px auto}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--red);color:#fff;
+  padding:clamp(3rem,7vw,5.5rem) 0 clamp(3.5rem,8vw,6rem);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(700px 420px at 85% 20%,rgba(0,0,0,.22),transparent 65%),
+    radial-gradient(500px 380px at 8% 90%,rgba(0,0,0,.18),transparent 60%);
+}
+.hero__grid{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;align-items:center;
+}
+.hero__love{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.hero__love p{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.stars{display:flex;gap:2px}
+.stars svg{width:14px;height:14px;fill:#fff}
+.avatars{display:flex}
+.avatars span{
+  width:30px;height:30px;border-radius:50%;border:2px solid var(--red);
+  display:grid;place-items:center;font-size:.58rem;font-weight:800;
+  background:#111;color:#fff;margin-left:-8px;letter-spacing:.04em;
+}
+.avatars span:first-child{margin-left:0}
+.avatars span:nth-child(2){background:#fff;color:var(--red)}
+.avatars span:nth-child(3){background:#3a3a3a}
+.avatars span:nth-child(4){background:var(--red);border-color:#fff}
+.hero h1{
+  font-family:var(--serif);font-weight:700;text-transform:uppercase;
+  font-size:clamp(2.7rem,7.2vw,5.4rem);line-height:.98;letter-spacing:-.015em;
+}
+.hero h1 .script{
+  display:inline-block;color:#0B0B0B;font-size:1.02em;
+  text-transform:none;margin-right:.1em;transform:rotate(-3deg);
+}
+.hero__sub{
+  margin-top:1.4rem;max-width:44ch;font-size:1.04rem;color:rgba(255,255,255,.92);
+}
+.hero__note{
+  margin-top:1.1rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:700;color:#0B0B0B;
+}
+
+/* search bar */
+.search{
+  margin-top:2.2rem;background:#fff;color:#111;border-radius:4px;
+  box-shadow:0 26px 50px -24px rgba(0,0,0,.55);
+  display:grid;grid-template-columns:1fr 1fr .8fr auto;
+  overflow:hidden;max-width:760px;
+}
+.search__field{
+  padding:.95rem 1.1rem;border-right:1px solid rgba(0,0,0,.12);
+  display:flex;flex-direction:column;gap:.25rem;min-width:0;
+}
+.search__field label{
+  font-size:.6rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#777;
+}
+.search__field input,.search__field select{
+  border:0;background:transparent;font-size:.95rem;font-weight:600;
+  width:100%;outline:none;color:#111;padding:.1rem 0;
+}
+.search__field input::-webkit-calendar-picker-indicator{opacity:.5;cursor:pointer}
+.search .btn{border-radius:0;padding-inline:1.6rem;height:100%}
+.search__msg{
+  grid-column:1/-1;background:#0B0B0B;color:#fff;font-size:.78rem;
+  padding:.6rem 1.1rem;display:none;
+}
+.search__msg.show{display:block}
+
+/* hero art */
+.hero__art{
+  position:relative;border-radius:6px;overflow:hidden;
+  box-shadow:0 30px 60px -25px rgba(0,0,0,.6);
+  aspect-ratio:4/5;max-height:560px;
+}
+.hero__art .art-label{
+  position:absolute;left:0;bottom:0;right:0;
+  background:rgba(11,11,11,.78);color:#fff;
+  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+  padding:.65rem .9rem;font-weight:700;backdrop-filter:blur(4px);
+}
+.hero__side{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%) rotate(180deg);
+  writing-mode:vertical-rl;font-size:.62rem;letter-spacing:.34em;
+  text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.55);
+  z-index:3;display:none;
+}
+
+/* ============ ROOMS ============ */
+.section{padding:clamp(3.5rem,7vw,5.5rem) 0}
+.section--ink{background:#0A0A0A;color:#F3F1EE}
+html[data-theme="dark"] .section--ink{border-block:1px solid var(--line)}
+.section--red{background:var(--red);color:#fff}
+.section--ink .sec-title .script,.section--red .sec-title .script{color:#fff}
+.section--red .sec-title .script{color:#0B0B0B}
+.section--ink .sec-head .eyebrow{color:var(--red)}
+.section--red .sec-head .eyebrow{color:#0B0B0B}
+.section--red .sec-sub{color:rgba(255,255,255,.9)}
+.section--ink .sec-sub{color:#A8A4A0}
+
+.rooms-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;
+}
+.room-card{
+  background:var(--surface);color:var(--text);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;
+}
+.room-card:hover{transform:translateY(-6px)}
+.room-card__img{aspect-ratio:4/3;position:relative;overflow:hidden}
+.room-card__img .tag{
+  position:absolute;top:.7rem;left:.7rem;background:#0B0B0B;color:#fff;
+  font-size:.58rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  padding:.35rem .6rem;border-radius:2px;
+}
+.room-card__img .tag--red{background:var(--red)}
+.room-card__body{padding:1.3rem 1.3rem 1.5rem;display:flex;flex-direction:column;flex:1}
+.room-card h3{
+  font-family:var(--serif);font-size:1.5rem;text-transform:uppercase;
+  letter-spacing:.01em;line-height:1.1;
+}
+.room-card h3 .script{font-size:1.05em;color:var(--red);text-transform:none}
+.specs{margin:1rem 0 .9rem}
+.specs .row{
+  display:flex;justify-content:space-between;align-items:baseline;gap:.6rem;
+  padding:.45rem 0;border-bottom:1.5px solid rgba(225,14,30,.55);
+  font-size:.82rem;
+}
+.specs .row span{
+  font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--muted);
+}
+.specs .row b{font-weight:700;text-align:right}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.1rem}
+.chips li{
+  list-style:none;font-size:.6rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;border:1px solid var(--line);
+  padding:.3rem .55rem;border-radius:99px;color:var(--muted);
+}
+.room-card__foot{
+  margin-top:auto;display:flex;align-items:center;justify-content:space-between;
+  gap:.8rem;padding-top:1rem;border-top:1px solid var(--line);
+}
+.price{font-family:var(--serif);font-size:1.7rem;font-weight:700;line-height:1}
+.price small{
+  display:block;font-family:var(--sans);font-size:.6rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;
+}
+.room-card .btn{padding:.7rem 1rem;font-size:.66rem}
+
+/* ============ FACILITIES ============ */
+.fac-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.16);
+  border-left:1px solid rgba(255,255,255,.16);
+}
+.fac{
+  padding:1.8rem 1.4rem;
+  border-right:1px solid rgba(255,255,255,.16);
+  border-bottom:1px solid rgba(255,255,255,.16);
+  transition:background .2s;
+}
+.fac:hover{background:rgba(255,255,255,.05)}
+.fac svg{width:30px;height:30px;stroke:var(--red);fill:none;stroke-width:1.7;margin-bottom:1rem}
+.fac h3{
+  font-size:.74rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:.5rem;
+}
+.fac p{font-size:.88rem;color:#A8A4A0;line-height:1.55}
+
+/* ============ PRICES ============ */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;min-width:640px;background:var(--surface)}
+thead th{
+  background:#0B0B0B;color:#fff;text-align:left;
+  font-size:.64rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  padding:1rem 1.2rem;
+}
+tbody td{
+  padding:1.05rem 1.2rem;border-bottom:1px solid var(--line);
+  font-size:.95rem;vertical-align:middle;
+}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:var(--surface-2)}
+td.room-name{
+  font-family:var(--serif);font-weight:700;font-size:1.05rem;text-transform:uppercase;
+}
+td.rate{font-family:var(--serif);font-weight:700;font-size:1.25rem;white-space:nowrap}
+td.rate span{font-family:var(--sans);font-size:.62rem;font-weight:700;color:var(--muted);letter-spacing:.1em}
+.tax-note{
+  margin-top:1.3rem;border-left:4px solid var(--red);
+  padding:.85rem 1.1rem;background:var(--surface-2);
+  font-size:.88rem;color:var(--muted);
+}
+.tax-note b{color:var(--text)}
+
+/* ============ REVIEWS ============ */
+.avg{
+  display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;
+  background:rgba(11,11,11,.9);border-radius:var(--radius);
+  padding:1.5rem 1.8rem;margin-bottom:2.2rem;color:#fff;
+}
+.avg__num{font-family:var(--serif);font-size:4rem;font-weight:700;line-height:1}
+.avg__num span{font-size:1.4rem;color:rgba(255,255,255,.6)}
+.avg .stars svg{fill:var(--red);width:18px;height:18px}
+.avg p{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.75)}
+.avg strong{display:block;font-size:1rem;letter-spacing:.06em;color:#fff;text-transform:none;font-weight:600;margin-top:.25rem}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.review{
+  background:var(--surface);color:var(--text);border-radius:var(--radius);
+  padding:1.5rem;box-shadow:var(--shadow);border:1px solid var(--line);
+  display:flex;flex-direction:column;gap:.8rem;
+}
+.review__top{display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem}
+.review__who{display:flex;align-items:center;gap:.75rem}
+.review__ava{
+  width:38px;height:38px;border-radius:50%;background:#0B0B0B;color:#fff;
+  display:grid;place-items:center;font-weight:800;font-size:.72rem;flex-shrink:0;
+}
+.review:nth-child(odd) .review__ava{background:var(--red)}
+.review__who b{display:block;font-size:.92rem}
+.review__who time{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.review .stars{gap:1px}
+.review .stars svg{width:13px;height:13px;fill:var(--red)}
+.review .stars svg.off{fill:rgba(0,0,0,.2)}
+html[data-theme="dark"] .review .stars svg.off{fill:rgba(255,255,255,.22)}
+.review p{font-size:.92rem;color:var(--muted);line-height:1.6}
+
+/* ============ BOOKING ============ */
+.book-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:1.6rem;align-items:start}
+.summary{
+  background:#0A0A0A;color:#F3F1EE;border-radius:var(--radius);
+  padding:1.9rem 1.7rem;position:sticky;top:100px;
+}
+html[data-theme="dark"] .summary{border:1px solid var(--line)}
+.summary h3{
+  font-family:var(--serif);font-size:1.7rem;text-transform:uppercase;line-height:1.1;
+  margin-bottom:.35rem;
+}
+.summary h3 .script{color:var(--red);font-size:1.1em;text-transform:none}
+.summary .eyebrow{color:var(--red);display:block;margin-bottom:.8rem}
+.summary .row{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.7rem 0;border-bottom:1.5px solid rgba(225,14,30,.6);
+  font-size:.9rem;
+}
+.summary .row span{
+  font-size:.64rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  color:#A8A4A0;
+}
+.summary .row b{font-weight:700;text-align:right}
+.summary .total{
+  display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:1.2rem;padding-top:1rem;border-top:2px solid #fff;
+}
+.summary .total span{
+  font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#A8A4A0;
+}
+.summary .total b{font-family:var(--serif);font-size:2.3rem;color:#fff;line-height:1}
+.summary__hint{font-size:.78rem;color:#A8A4A0;margin-top:.9rem}
+.summary__hint.error{color:#FF8A8A}
+
+.form-card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius);padding:clamp(1.4rem,3vw,2.2rem);
+  box-shadow:var(--shadow);
+}
+.form-card.flash{animation:flash 1.2s ease}
+@keyframes flash{
+  0%,100%{box-shadow:var(--shadow)}
+  30%{box-shadow:0 0 0 5px rgba(225,14,30,.55)}
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.2rem}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field--full{grid-column:1/-1}
+.field label{
+  font-size:.64rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);
+}
+.field input,.field select,.field textarea{
+  background:var(--surface-2);border:1.5px solid var(--line);border-radius:4px;
+  padding:.8rem .9rem;font-size:.95rem;transition:border-color .2s,box-shadow .2s;
+  width:100%;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(225,14,30,.18);
+}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--red)}
+.field .err{
+  font-size:.74rem;color:var(--red);font-weight:600;min-height:1em;display:none;
+}
+.field.invalid .err{display:block}
+.field textarea{resize:vertical;min-height:96px}
+.form-foot{margin-top:1.4rem;display:flex;flex-direction:column;gap:.7rem}
+.form-foot .fine{font-size:.76rem;color:var(--muted)}
+.confirm{
+  display:none;background:var(--surface);border:1.5px solid var(--red);
+  border-radius:var(--radius);padding:clamp(1.6rem,3vw,2.4rem);
+  box-shadow:var(--shadow);
+}
+.confirm.show{display:block}
+.confirm__badge{
+  display:inline-flex;align-items:center;gap:.5rem;background:var(--red);color:#fff;
+  font-size:.64rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  padding:.45rem .8rem;border-radius:2px;margin-bottom:1.1rem;
+}
+.confirm h3{
+  font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.2rem);
+  text-transform:uppercase;line-height:1.1;margin-bottom:.6rem;
+}
+.confirm h3 .script{color:var(--red);text-transform:none;font-size:1.12em}
+.confirm > p{color:var(--muted);margin-bottom:1.3rem}
+.confirm .row{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.65rem 0;border-bottom:1.5px solid rgba(225,14,30,.5);font-size:.92rem;
+}
+.confirm .row span{
+  font-size:.62rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.confirm .row b{text-align:right}
+.confirm .btn{margin-top:1.4rem}
+
+/* ============ FOOTER ============ */
+.footer{background:#0A0A0A;color:#F3F1EE}
+.footer__strip{
+  border-bottom:1px solid rgba(255,255,255,.14);
+  padding:1.3rem 0;overflow:hidden;
+}
+.footer__strip ul{
+  display:flex;gap:2.6rem;list-style:none;justify-content:center;flex-wrap:wrap;
+}
+.footer__strip li{
+  font-family:var(--serif);font-weight:700;font-size:1.05rem;
+  text-transform:uppercase;letter-spacing:.06em;opacity:.55;
+}
+.footer__main{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;
+  padding:3rem 0 2.4rem;
+}
+.footer__brand .brand__badge{background:var(--red);color:#fff}
+.footer__brand p{color:#A8A4A0;font-size:.92rem;margin-top:1rem;max-width:34ch}
+.footer h4{
+  font-size:.66rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--red);margin-bottom:1.1rem;
+}
+.footer address{font-style:normal;color:#A8A4A0;font-size:.94rem;line-height:1.8}
+.footer address a{color:#F3F1EE;border-bottom:1px solid rgba(255,255,255,.3)}
+.footer address a:hover{color:var(--red);border-color:var(--red)}
+.footer__policies li{list-style:none;margin-bottom:.55rem}
+.footer__policies a{
+  font-size:.92rem;color:#A8A4A0;border-bottom:1px solid transparent;
+}
+.footer__policies a:hover{color:#fff;border-bottom-color:var(--red)}
+.footer__bar{
+  border-top:1px solid rgba(255,255,255,.14);
+  padding:1.2rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7d7a76;
+}
+
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width:1200px){.hero__side{display:block}}
+@media (max-width:1080px){
+  .rooms-grid{grid-template-columns:repeat(2,1fr)}
+  .fac-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .book-grid{grid-template-columns:1fr}
+  .summary{position:static}
+  .hero__grid{grid-template-columns:1fr}
+  .hero__art{max-height:380px;aspect-ratio:16/9;order:-1}
+}
+@media (max-width:760px){
+  .nav__burger{display:block}
+  .nav__links{
+    display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;
+    background:var(--nav-bg);flex-direction:column;align-items:stretch;
+    gap:0;padding:.6rem 0 1rem;border-bottom:1px solid rgba(255,255,255,.25);
+    box-shadow:0 20px 30px -18px rgba(0,0,0,.5);
+  }
+  .nav__links.open{display:flex}
+  .nav__links a{padding:.9rem 4vw;border-bottom:0;border-left:3px solid transparent}
+  .nav__links a:hover{border-left-color:#fff}
+  .nav__cta{margin:.7rem 4vw 0;text-align:center}
+  .nav .theme-toggle{order:3}
+  .search{grid-template-columns:1fr}
+  .search__field{border-right:0;border-bottom:1px solid rgba(0,0,0,.12)}
+  .search .btn{padding-block:1rem}
+  .rooms-grid,.reviews-grid{grid-template-columns:1fr}
+  .fac-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .footer__main{grid-template-columns:1fr;gap:2rem}
+  .avg{gap:1rem;padding:1.2rem}
+  .avg__num{font-size:3rem}
+  .hero h1 .script{transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="OYO Gateway Inn home">
+      <span class="brand__badge">OYO</span>
+      <span class="brand__tag">Gateway Inn · Vijayawada</span>
+    </a>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="navLinks" aria-label="Primary">
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+      <button class="nav__cta" data-scroll="#book" type="button">Book now</button>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light / dark">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <span class="hero__side">OYO Gateway Inn — Benz Circle</span>
+  <div class="wrap hero__grid">
+    <div>
+      <div class="hero__love">
+        <p>Loved by 4,000+ guests</p>
+        <div class="stars" aria-label="Rated 4.6 out of 5">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+        </div>
+        <div class="avatars" aria-hidden="true"><span>PS</span><span>RV</span><span>AR</span><span>KI</span></div>
+      </div>
+
+      <h1 aria-label="Comfortable stays at honest prices">
+        <span class="script">Comfortable</span>
+        <span>stays at honest prices</span>
+      </h1>
+      <p class="hero__sub">Real photos, spotless linen and a front desk that never sleeps — five minutes from Benz Circle, from ₹999 a night.</p>
+      <p class="hero__note">Free cancellation up to 24 hours before check-in</p>
+
+      <form class="search" id="searchForm" novalidate>
+        <div class="search__field">
+          <label for="hIn">Check-in</label>
+          <input type="date" id="hIn" name="checkin" required>
+        </div>
+        <div class="search__field">
+          <label for="hOut">Check-out</label>
+          <input type="date" id="hOut" name="checkout" required>
+        </div>
+        <div class="search__field">
+          <label for="hGuests">Guests</label>
+          <select id="hGuests" name="guests">
+            <option value="1">1 guest</option>
+            <option value="2" selected>2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Check availability</button>
+        <div class="search__msg" id="searchMsg" role="alert"></div>
+      </form>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <!-- Swappable hero visual: replace this SVG with an <img> later -->
+      <svg viewBox="0 0 400 500" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Hotel room illustration">
+        <defs>
+          <linearGradient id="heroG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8f0a14"/><stop offset=".55" stop-color="#5c060d"/><stop offset="1" stop-color="#2b0205"/>
+          </linearGradient>
+          <linearGradient id="heroWin" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffd9c2"/><stop offset="1" stop-color="#e10e1e" stop-opacity=".25"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="500" fill="url(#heroG)"/>
+        <circle cx="320" cy="90" r="130" fill="#ffffff" opacity=".05"/>
+        <!-- arch window -->
+        <path d="M60 300V150a80 80 0 0 1 160 0v150z" fill="url(#heroWin)" opacity=".9"/>
+        <path d="M60 300V150a80 80 0 0 1 160 0v150" fill="none" stroke="#fff" stroke-width="4" opacity=".85"/>
+        <line x1="140" y1="72" x2="140" y2="300" stroke="#fff" stroke-width="3" opacity=".7"/>
+        <line x1="60" y1="220" x2="220" y2="220" stroke="#fff" stroke-width="3" opacity=".7"/>
+        <!-- bed -->
+        <rect x="40" y="330" width="320" height="90" rx="8" fill="#f4efe8"/>
+        <rect x="40" y="330" width="320" height="26" rx="8" fill="#ddd5cb"/>
+        <rect x="70" y="300" width="110" height="46" rx="10" fill="#fff"/>
+        <rect x="210" y="300" width="110" height="46" rx="10" fill="#fff"/>
+        <rect x="40" y="414" width="320" height="14" rx="4" fill="#1c1c1c"/>
+        <!-- lamp -->
+        <line x1="345" y1="240" x2="345" y2="320" stroke="#f4efe8" stroke-width="4"/>
+        <path d="M325 240h40l-8-36h-24z" fill="#f4efe8"/>
+        <circle cx="345" cy="236" r="10" fill="#ffd9c2"/>
+        <!-- plant -->
+        <path d="M355 470c-4-30 8-52 24-64-2 26-10 46-24 64z" fill="#2f4a33" opacity=".9"/>
+        <path d="M355 470c2-24-6-44-20-56 0 24 6 42 20 56z" fill="#3d6344" opacity=".9"/>
+        <rect x="344" y="464" width="24" height="26" rx="3" fill="#f4efe8"/>
+        <!-- rug -->
+        <ellipse cx="200" cy="470" rx="150" ry="24" fill="#ffffff" opacity=".08"/>
+      </svg>
+      <span class="art-label">Deluxe room · property photo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROOMS ================= -->
+<section class="section" id="rooms">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">01 — Our rooms</span>
+      <h2 class="sec-title">Pick your <span class="script">perfect</span> room</h2>
+      <p class="sec-sub">Four room types, one honest rate card. Every room is cleaned before arrival and photographed as it is.</p>
+    </header>
+
+    <div class="rooms-grid">
+      <!-- STANDARD -->
+      <article class="room-card reveal">
+        <div class="room-card__img">
+          <span class="tag tag--red">From ₹999</span>
+          <!-- Swap with <img src="standard.jpg" alt="Standard room"> later -->
+          <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-label="Standard room placeholder">
+            <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8ded0"/><stop offset="1" stop-color="#c9b8a2"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#g1)"/>
+            <path d="M250 210V120a46 46 0 0 1 92 0v90z" fill="#fff" opacity=".55"/>
+            <path d="M250 210V120a46 46 0 0 1 92 0v90" fill="none" stroke="#8a755c" stroke-width="3"/>
+            <line x1="296" y1="76" x2="296" y2="210" stroke="#8a755c" stroke-width="2.5"/>
+            <rect x="30" y="200" width="230" height="64" rx="6" fill="#fff"/>
+            <rect x="30" y="200" width="230" height="16" rx="6" fill="#d9cfc1"/>
+            <rect x="48" y="176" width="80" height="34" rx="8" fill="#f7f3ec"/>
+            <rect x="146" y="176" width="80" height="34" rx="8" fill="#f7f3ec"/>
+            <rect x="30" y="260" width="230" height="10" fill="#3b3b3b"/>
+            <line x1="360" y1="150" x2="360" y2="240" stroke="#3b3b3b" stroke-width="3"/>
+            <path d="M346 150h28l-6-24h-16z" fill="#3b3b3b"/>
+            <ellipse cx="200" cy="284" rx="160" ry="16" fill="#000" opacity=".07"/>
+          </svg>
+        </div>
+        <div class="room-card__body">
+          <h3>Standard</h3>
+          <div class="specs">
+            <div class="row"><span>Size</span><b>160 sq ft · 15 m²</b></div>
+            <div class="row"><span>Bed</span><b>Double bed</b></div>
+            <div class="row"><span>Max guests</span><b>2 adults</b></div>
+          </div>
+          <ul class="chips">
+            <li>Free Wi-Fi</li><li>Split AC</li><li>32" TV</li><li>24×7 desk</li>
+          </ul>
+          <div class="room-card__foot">
+            <div class="price">₹999<small>per night</small></div>
+            <button class="btn" type="button" data-room="standard">Select room</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- DELUXE -->
+      <article class="room-card reveal">
+        <div class="room-card__img">
+          <span class="tag">Most booked</span>
+          <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-label="Deluxe room placeholder">
+            <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9c4b0"/><stop offset="1" stop-color="#9c7a5e"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#g2)"/>
+            <rect x="40" y="60" width="140" height="100" rx="4" fill="#efe6da" opacity=".8"/>
+            <line x1="110" y1="60" x2="110" y2="160" stroke="#7a5f47" stroke-width="2.5"/>
+            <line x1="40" y1="110" x2="180" y2="110" stroke="#7a5f47" stroke-width="2.5"/>
+            <rect x="60" y="196" width="280" height="70" rx="6" fill="#fff"/>
+            <rect x="60" y="196" width="280" height="18" rx="6" fill="#cbb49a"/>
+            <rect x="82" y="168" width="104" height="38" rx="9" fill="#faf6f0"/>
+            <rect x="204" y="168" width="104" height="38" rx="9" fill="#faf6f0"/>
+            <rect x="60" y="262" width="280" height="10" fill="#33261c"/>
+            <circle cx="356" cy="96" r="22" fill="#ffd9a8" opacity=".9"/>
+            <line x1="356" y1="40" x2="356" y2="74" stroke="#33261c" stroke-width="3"/>
+            <line x1="330" y1="40" x2="382" y2="40" stroke="#33261c" stroke-width="3"/>
+            <ellipse cx="200" cy="286" rx="170" ry="14" fill="#000" opacity=".08"/>
+          </svg>
+        </div>
+        <div class="room-card__body">
+          <h3>Deluxe</h3>
+          <div class="specs">
+            <div class="row"><span>Size</span><b>220 sq ft · 20 m²</b></div>
+            <div class="row"><span>Bed</span><b>Queen bed</b></div>
+            <div class="row"><span>Max guests</span><b>2 adults</b></div>
+          </div>
+          <ul class="chips">
+            <li>Breakfast</li><li>City view</li><li>Work desk</li><li>Mini bar</li>
+          </ul>
+          <div class="room-card__foot">
+            <div class="price">₹1,749<small>per night</small></div>
+            <button class="btn" type="button" data-room="deluxe">Select room</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- FAMILY SUITE -->
+      <article class="room-card reveal">
+        <div class="room-card__img">
+          <span class="tag tag--red">From ₹2,699</span>
+          <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-label="Family suite placeholder">
+            <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c8cfd6"/><stop offset="1" stop-color="#7d8894"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#g3)"/>
+            <rect x="24" y="188" width="150" height="64" rx="6" fill="#fff"/>
+            <rect x="24" y="188" width="150" height="15" rx="6" fill="#b6bfc8"/>
+            <rect x="38" y="166" width="58" height="30" rx="7" fill="#f2f5f7"/>
+            <rect x="104" y="166" width="58" height="30" rx="7" fill="#f2f5f7"/>
+            <rect x="24" y="248" width="150" height="9" fill="#2c333b"/>
+            <rect x="206" y="204" width="160" height="48" rx="6" fill="#fff"/>
+            <rect x="206" y="204" width="160" height="13" rx="6" fill="#b6bfc8"/>
+            <rect x="220" y="184" width="56" height="28" rx="7" fill="#f2f5f7"/>
+            <rect x="206" y="248" width="160" height="9" fill="#2c333b"/>
+            <rect x="196" y="70" width="96" height="76" rx="4" fill="#eef1f4" opacity=".85"/>
+            <line x1="244" y1="70" x2="244" y2="146" stroke="#59636e" stroke-width="2.5"/>
+            <line x1="196" y1="108" x2="292" y2="108" stroke="#59636e" stroke-width="2.5"/>
+            <ellipse cx="200" cy="284" rx="175" ry="14" fill="#000" opacity=".08"/>
+          </svg>
+        </div>
+        <div class="room-card__body">
+          <h3>Family <span class="script">Suite</span></h3>
+          <div class="specs">
+            <div class="row"><span>Size</span><b>320 sq ft · 30 m²</b></div>
+            <div class="row"><span>Bed</span><b>1 King + 1 Single</b></div>
+            <div class="row"><span>Max guests</span><b>4 (3 adults + 1 child)</b></div>
+          </div>
+          <ul class="chips">
+            <li>Breakfast</li><li>Mini fridge</li><li>Sofa</li><li>Extra towels</li>
+          </ul>
+          <div class="room-card__foot">
+            <div class="price">₹2,699<small>per night</small></div>
+            <button class="btn" type="button" data-room="family">Select room</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- PREMIUM SUITE -->
+      <article class="room-card reveal">
+        <div class="room-card__img">
+          <span class="tag">Top stay</span>
+          <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-label="Premium suite placeholder">
+            <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4c4c52"/><stop offset="1" stop-color="#17171b"/></linearGradient></defs>
+            <rect width="400" height="300" fill="url(#g4)"/>
+            <rect x="30" y="40" width="120" height="120" rx="4" fill="#d8c39a" opacity=".35"/>
+            <line x1="90" y1="40" x2="90" y2="160" stroke="#d8c39a" stroke-width="2" opacity=".7"/>
+            <line x1="30" y1="100" x2="150" y2="100" stroke="#d8c39a" stroke-width="2" opacity=".7"/>
+            <rect x="40" y="196" width="220" height="64" rx="6" fill="#efe9df"/>
+            <rect x="40" y="196" width="220" height="16" rx="6" fill="#c8bda9"/>
+            <rect x="60" y="172" width="90" height="34" rx="8" fill="#fff"/>
+            <rect x="164" y="172" width="76" height="34" rx="8" fill="#fff"/>
+            <rect x="40" y="256" width="220" height="10" fill="#0d0d0f"/>
+            <path d="M290 232c0-30 16-48 44-48s44 18 44 48v20h-88z" fill="#e9e4db"/>
+            <rect x="286" y="248" width="96" height="16" rx="6" fill="#c8bda9"/>
+            <circle cx="356" cy="86" r="16" fill="#d8c39a" opacity=".85"/>
+            <line x1="356" y1="40" x2="356" y2="70" stroke="#d8c39a" stroke-width="2.5"/>
+            <ellipse cx="200" cy="286" rx="175" ry="13" fill="#000" opacity=".14"/>
+          </svg>
+        </div>
+        <div class="room-card__body">
+          <h3>Premium <span class="script">Suite</span></h3>
+          <div class="specs">
+            <div class="row"><span>Size</span><b>420 sq ft · 39 m²</b></div>
+            <div class="row"><span>Bed</span><b>King bed</b></div>
+            <div class="row"><span>Max guests</span><b>4 adults</b></div>
+          </div>
+          <ul class="chips">
+            <li>Balcony</li><li>Bathtub</li><li>Living area</li><li>Breakfast</li>
+          </ul>
+          <div class="room-card__foot">
+            <div class="price">₹3,999<small>per night</small></div>
+            <button class="btn" type="button" data-room="premium">Select room</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACILITIES ================= -->
+<section class="section section--ink" id="facilities">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">02 — Facilities</span>
+      <h2 class="sec-title">The <span class="script">essentials</span>, done right</h2>
+      <p class="sec-sub">Eight things every guest gets — no upgrade traps, no surprise add-ons at checkout.</p>
+    </header>
+
+    <div class="fac-grid reveal">
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor" stroke="none"/><path d="M2 9a14 14 0 0 1 20 0"/></svg>
+        <h3>Free Wi-Fi</h3>
+        <p>25 Mbps in every room, lift and lobby. Password at check-in.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="3" y="5" width="18" height="8" rx="2"/><path d="M7 9h2M12 9h2M17 9h1"/><path d="M7 17c0 1.5 1 2.5 2.5 3M17 17c0 1.5-1 2.5-2.5 3"/><path d="M12 16v5"/></svg>
+        <h3>Air Conditioning</h3>
+        <p>Split AC with individual remotes and a quiet night mode.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M4 11h13a4 4 0 0 1 0 8h-1"/><path d="M4 11V7a3 3 0 0 1 3-3h7a3 3 0 0 1 3 3v4"/><path d="M7 19v2M14 19v2"/></svg>
+        <h3>Breakfast</h3>
+        <p>Idli, dosa, paratha and filter coffee served till 10:30 am.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M5 16l1.5-5A2 2 0 0 1 8.4 9.5h7.2a2 2 0 0 1 1.9 1.5L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/><circle cx="7.5" cy="19.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="16.5" cy="19.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+        <h3>Parking</h3>
+        <p>Free car and two-wheeler parking inside the gated compound.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><circle cx="12" cy="13" r="7"/><path d="M12 10v3.5l2.5 1.5"/><path d="M9 3h6"/><path d="M12 3v3"/></svg>
+        <h3>24/7 Front Desk</h3>
+        <p>Check in at any hour. Late checkout on request, subject to availability.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M9 3l3 2 3-2 4 3-2 3v11H7V9L5 6z"/><path d="M7 9h10"/></svg>
+        <h3>Laundry</h3>
+        <p>Wash, dry and fold returned within 24 hours. Express service on request.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><path d="M13 2L5 14h6l-1 8 9-13h-6z"/></svg>
+        <h3>Power Backup</h3>
+        <p>Full genset backup for lifts, ACs, lights and the front desk.</p>
+      </div>
+      <div class="fac">
+        <svg viewBox="0 0 24 24" stroke-linecap="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3z"/><circle cx="9.5" cy="12" r="2"/></svg>
+        <h3>CCTV Security</h3>
+        <p>Cameras at the entrance, both lifts and every corridor. 30-day retention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICES ================= -->
+<section class="section" id="prices">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">03 — Price list</span>
+      <h2 class="sec-title">Simple, <span class="script">honest</span> prices</h2>
+      <p class="sec-sub">Same rate on every channel. What you see here is what you pay at the desk.</p>
+    </header>
+
+    <div class="table-scroll reveal">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Room type</th>
+            <th scope="col">Size</th>
+            <th scope="col">Bed</th>
+            <th scope="col">Guests</th>
+            <th scope="col">Rate / night</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="room-name">Standard</td>
+            <td>160 sq ft</td>
+            <td>Double bed</td>
+            <td>2</td>
+            <td class="rate">₹999 <span>+ tax</span></td>
+          </tr>
+          <tr>
+            <td class="room-name">Deluxe</td>
+            <td>220 sq ft</td>
+            <td>Queen bed</td>
+            <td>2</td>
+            <td class="rate">₹1,749 <span>+ tax</span></td>
+          </tr>
+          <tr>
+            <td class="room-name">Family Suite</td>
+            <td>320 sq ft</td>
+            <td>1 King + 1 Single</td>
+            <td>4</td>
+            <td class="rate">₹2,699 <span>+ tax</span></td>
+          </tr>
+          <tr>
+            <td class="room-name">Premium Suite</td>
+            <td>420 sq ft</td>
+            <td>King bed</td>
+            <td>4</td>
+            <td class="rate">₹3,999 <span>+ tax</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tax-note reveal">
+      <b>Tax note:</b> all rates are per room per night in ₹ and exclude <b>12% GST</b>, added at checkout.
+      Weekend nights (Fri–Sat) may run 10–15% higher. Breakfast is included with Deluxe and all suites;
+      add it to Standard for ₹149 per guest. Free cancellation until 24 hours before check-in.
+    </p>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="section section--red" id="reviews">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">04 — Guest reviews</span>
+      <h2 class="sec-title">Guests <span class="script">say it</span> best</h2>
+      <p class="sec-sub">Verified stays from the last 90 days. Only booked guests can review.</p>
+    </header>
+
+    <div class="avg reveal">
+      <div class="avg__num">4.6<span>/5</span></div>
+      <div>
+        <div class="stars" aria-label="4.6 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+        </div>
+        <p>Excellent<strong>Based on 412 verified reviews</strong></p>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">PS</span>
+            <div><b>Priya Sharma</b><time datetime="2026-11-12">12 Nov 2026</time></div>
+          </div>
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Clean room, quick check-in. The desk arranged a cab to the station at 5 am without me asking twice.</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">RV</span>
+            <div><b>Rahul Verma</b><time datetime="2026-10-28">28 Oct 2026</time></div>
+          </div>
+          <div class="stars" aria-label="4 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg class="off" viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Good value near Benz Circle. AC was strong all night; walls are a bit thin, earplugs fixed that.</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">AR</span>
+            <div><b>Ananya Reddy</b><time datetime="2026-10-15">15 Oct 2026</time></div>
+          </div>
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Booked the Family Suite for four. Plenty of space, hot water all day and the kids loved the sofa bed.</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">KI</span>
+            <div><b>Karthik Iyer</b><time datetime="2026-10-02">2 Oct 2026</time></div>
+          </div>
+          <div class="stars" aria-label="4 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg class="off" viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Breakfast was simple but fresh — filter coffee and hot idlis. Parking right outside the gate.</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">SP</span>
+            <div><b>Sneha Patel</b><time datetime="2026-09-20">20 Sep 2026</time></div>
+          </div>
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Late checkout was no fuss. Beds were firm and the sheets smelled properly laundered.</p>
+      </article>
+
+      <article class="review reveal">
+        <div class="review__top">
+          <div class="review__who">
+            <span class="review__ava">IK</span>
+            <div><b>Imran Khan</b><time datetime="2026-09-05">5 Sep 2026</time></div>
+          </div>
+          <div class="stars" aria-label="4 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+            <svg class="off" viewBox="0 0 24 24"><path d="M12 2l3 6.6 7.2.8-5.4 4.9 1.5 7.1L12 17.8 5.7 21.4l1.5-7.1L1.8 9.4 9 8.6z"/></svg>
+          </div>
+        </div>
+        <p>Solid stay for the price. Wi-Fi dipped one evening but the staff had it back in ten minutes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="section" id="book">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <span class="eyebrow">05 — Booking</span>
+      <h2 class="sec-title">Book in <span class="script">sixty</span> seconds</h2>
+      <p class="sec-sub">Fill the form, see the exact total, confirm. You pay at the hotel — nothing is charged now.</p>
+    </header>
+
+    <div class="book-grid">
+      <!-- LIVE PRICE SUMMARY -->
+      <aside class="summary reveal" id="summaryCard" aria-live="polite">
+        <span class="eyebrow">Price summary</span>
+        <h3>Your <span class="script">stay</span></h3>
+        <div class="row"><span>Room</span><b id="sumRoom">Select a room</b></div>
+        <div class="row"><span>Dates</span><b id="sumDates">Add dates</b></div>
+        <div class="row"><span>Guests</span><b id="sumGuests">2</b></div>
+        <div class="row"><span>Rate</span><b id="sumRate">—</b></div>
+        <div class="row"><span>Subtotal</span><b id="sumSub">—</b></div>
+        <div class="row"><span>GST 12%</span><b id="sumTax">—</b></div>
+        <div class="total"><span>Total</span><b id="sumTotal">—</b></div>
+        <p class="summary__hint" id="sumHint">Pick a room and dates to see the live total.</p>
+      </aside>
+
+      <!-- FORM -->
+      <div class="form-card reveal" id="formCard">
+        <form id="bookForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="bName">Full name</label>
+              <input type="text" id="bName" name="name" autocomplete="name" placeholder="e.g. Anjali Rao" required>
+              <span class="err" id="errName"></span>
+            </div>
+            <div class="field">
+              <label for="bEmail">Email</label>
+              <input type="email" id="bEmail" name="email" autocomplete="email" placeholder="you@example.com" required>
+              <span class="err" id="errEmail"></span>
+            </div>
+            <div class="field">
+              <label for="bPhone">Phone</label>
+              <input type="tel" id="bPhone" name="phone" autocomplete="tel" inputmode="numeric" placeholder="98765 43210" required>
+              <span class="err" id="errPhone"></span>
+            </div>
+            <div class="field">
+              <label for="bRoom">Room type</label>
+              <select id="bRoom" name="room" required>
+                <option value="">Choose a room</option>
+                <option value="standard">Standard — ₹999 / night</option>
+                <option value="deluxe">Deluxe — ₹1,749 / night</option>
+                <option value="family">Family Suite — ₹2,699 / night</option>
+                <option value="premium">Premium Suite — ₹3,999 / night</option>
+              </select>
+              <span class="err" id="errRoom"></span>
+            </div>
+            <div class="field">
+              <label for="bIn">Check-in</label>
+              <input type="date" id="bIn" name="checkin" required>
+              <span class="err" id="errIn"></span>
+            </div>
+            <div class="field">
+              <label for="bOut">Check-out</label>
+              <input type="date" id="bOut" name="checkout" required>
+              <span class="err" id="errOut"></span>
+            </div>
+            <div class="field">
+              <label for="bGuests">Guests</label>
+              <select id="bGuests" name="guests" required>
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+              </select>
+              <span class="err" id="errGuests"></span>
+            </div>
+            <div class="field">
+              <label for="bNotes">Special requests</label>
+              <input type="text" id="bNotes" name="notes" placeholder="Early check-in, extra pillow…" required>
+              <span class="err" id="errNotes"></span>
+            </div>
+          </div>
+
+          <div class="form-foot">
+            <button class="btn btn--full" type="submit">Confirm booking</button>
+            <p class="fine">No card needed now — pay at the hotel. Free cancellation until 24 hours before check-in.</p>
+          </div>
+        </form>
+
+        <!-- CONFIRMATION -->
+        <div class="confirm" id="confirmPanel" role="status" aria-live="polite">
+          <span class="confirm__badge">Booking confirmed</span>
+          <h3>You're <span class="script">all set</span></h3>
+          <p id="confirmIntro">A copy has been sent to your email.</p>
+          <div class="row"><span>Reference</span><b id="cRef">—</b></div>
+          <div class="row"><span>Guest</span><b id="cName">—</b></div>
+          <div class="row"><span>Room</span><b id="cRoom">—</b></div>
+          <div class="row"><span>Dates</span><b id="cDates">—</b></div>
+          <div class="row"><span>Guests</span><b id="cGuests">—</b></div>
+          <div class="row"><span>Total incl. 12% GST</span><b id="cTotal">—</b></div>
+          <p class="fine" id="cNotes" style="margin-top:1rem;color:var(--muted);font-size:.86rem"></p>
+          <button class="btn btn--ghost" type="button" id="againBtn">Make another booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+  <div class="footer__strip">
+    <ul>
+      <li>MakeMyTrip</li><li>Goibibo</li><li>Google Reviews</li><li>TripAdvisor</li><li>PhonePe</li>
+    </ul>
+  </div>
+  <div class="wrap footer__main">
+    <div class="footer__brand">
+      <span class="brand__badge">OYO</span>
+      <p>Gateway Inn is a verified OYO property in Governorpet — honest rooms, honest rates, five minutes from Benz Circle.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <address>
+        12-4-19 Governorpet, Near Benz Circle,<br>
+        Vijayawada, Andhra Pradesh 520001<br>
+        Phone: <a href="tel:+919849012345">+91 98490 12345</a><br>
+        Email: <a href="mailto:stay@gatewayinn-oyo.in">stay@gatewayinn-oyo.in</a>
+      </address>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <ul class="footer__policies">
+        <li><a href="#book">Cancellation &amp; refund policy</a></li>
+        <li><a href="#prices">Pricing &amp; tax policy</a></li>
+        <li><a href="#facilities">House rules &amp; check-in times</a></li>
+        <li><a href="#top">Privacy policy</a></li>
+        <li><a href="#top">Terms of stay</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__bar">
+    <span>© 2026 OYO Gateway Inn, Vijayawada</span>
+    <span>Check-in 12 pm · Check-out 11 am · GSTIN 37AABCU9603R1ZM</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- data ---------- */
+  var RATES  = {standard:999, deluxe:1749, family:2699, premium:3999};
+  var NAMES  = {standard:"Standard", deluxe:"Deluxe", family:"Family Suite", premium:"Premium Suite"};
+  var CAPS   = {standard:2, deluxe:2, family:4, premium:4};
+  var TAX    = 0.12;
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  /* ---------- theme ---------- */
+  var root = document.documentElement;
+  var saved = null;
+  try { saved = localStorage.getItem("oyo-theme"); } catch(e){}
+  if(saved === "dark" || saved === "light"){
+    root.setAttribute("data-theme", saved);
+  } else if(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches){
+    root.setAttribute("data-theme","dark");
+  }
+  $("themeToggle").addEventListener("click", function(){
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("oyo-theme", next); } catch(e){}
+  });
+
+  /* ---------- mobile nav ---------- */
+  var burger = $("navBurger"), links = $("navLinks");
+  burger.addEventListener("click", function(){
+    var open = links.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.addEventListener("click", function(e){
+    if(e.target.tagName === "A"){ links.classList.remove("open"); burger.setAttribute("aria-expanded","false"); }
+  });
+  document.querySelectorAll("[data-scroll]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var t = document.querySelector(btn.getAttribute("data-scroll"));
+      if(t) t.scrollIntoView({behavior:"smooth"});
+      links.classList.remove("open");
+    });
+  });
+
+  /* ---------- date helpers ---------- */
+  function todayStr(){
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+  }
+  function addDaysStr(n){
+    var d = new Date(); d.setDate(d.getDate()+n);
+    return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+  }
+  function fmtDate(s){
+    if(!s) return "";
+    var p = s.split("-");
+    var d = new Date(+p[0], +p[1]-1, +p[2]);
+    return d.toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
+  }
+  function nightsBetween(a,b){
+    var pa = a.split("-"), pb = b.split("-");
+    var da = Date.UTC(+pa[0], +pa[1]-1, +pa[2]);
+    var db = Date.UTC(+pb[0], +pb[1]-1, +pb[2]);
+    return Math.round((db-da)/86400000);
+  }
+  function inr(n){ return "₹" + n.toLocaleString("en-IN"); }
+
+  var TODAY = todayStr();
+  ["hIn","hOut","bIn","bOut"].forEach(function(id){ $(id).min = TODAY; });
+
+  /* ---------- price summary ---------- */
+  function calcSummary(){
+    var room = $("bRoom").value;
+    var ci = $("bIn").value, co = $("bOut").value;
+    var guests = $("bGuests").value;
+    var hint = $("sumHint");
+    hint.classList.remove("error");
+
+    $("sumGuests").textContent = guests + (guests === "1" ? " guest" : " guests");
+
+    var rate = room ? RATES[room] : null;
+    $("sumRoom").textContent = room ? NAMES[room] : "Select a room";
+    $("sumRate").textContent = rate ? inr(rate) + " / night" : "—";
+
+    var n = 0, datesOk = false;
+    if(ci && co){
+      n = nightsBetween(ci, co);
+      datesOk = n >= 1;
+      $("sumDates").textContent = datesOk
+        ? fmtDate(ci) + " → " + fmtDate(co) + " · " + n + (n === 1 ? " night" : " nights")
+        : "Check-out must be after check-in";
+      if(!datesOk) hint.classList.add("error");
+    } else {
+      $("sumDates").textContent = "Add dates";
+    }
+
+    if(rate && datesOk){
+      var sub = rate * n;
+      var tax = Math.round(sub * TAX);
+      $("sumSub").textContent = inr(sub);
+      $("sumTax").textContent = inr(tax);
+      $("sumTotal").textContent = inr(sub + tax);
+      hint.textContent = n + (n===1?" night":" nights") + " × " + inr(rate) + " + 12% GST. Payable at the hotel.";
+    } else {
+      $("sumSub").textContent = "—";
+      $("sumTax").textContent = "—";
+      $("sumTotal").textContent = "—";
+      if(!room && !datesOk) hint.textContent = "Pick a room and dates to see the live total.";
+      else if(!room) hint.textContent = "Choose a room type to see the total.";
+      else hint.textContent = "Add valid dates to see the total.";
+    }
+    return {room:room, ci:ci, co:co, n:n, rate:rate, datesOk:datesOk, guests:guests};
+  }
+  ["bRoom","bIn","bOut","bGuests"].forEach(function(id){
+    $(id).addEventListener("change", calcSummary);
+    $(id).addEventListener("input", calcSummary);
+  });
+
+  /* ---------- field validation ---------- */
+  function setErr(fieldId, errId, msg){
+    var f = $(fieldId).closest(".field");
+    var e = $(errId);
+    if(msg){
+      f.classList.add("invalid");
+      $(fieldId).setAttribute("aria-invalid","true");
+      e.textContent = msg;
+      return false;
+    }
+    f.classList.remove("invalid");
+    $(fieldId).removeAttribute("aria-invalid");
+    e.textContent = "";
+    return true;
+  }
+
+  function validateName(){
+    var v = $("bName").value.trim();
+    if(!v) return setErr("bName","errName","Please enter your full name.");
+    if(v.length < 2) return setErr("bName","errName","Name must be at least 2 characters.");
+    if(!/^[\p{L}][\p{L} .'’-]*$/u.test(v)) return setErr("bName","errName","Letters, spaces, dots and hyphens only.");
+    return setErr("bName","errName","");
+  }
+  function validateEmail(){
+    var v = $("bEmail").value.trim();
+    if(!v) return setErr("bEmail","errEmail","Please enter your email.");
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return setErr("bEmail","errEmail","Enter a valid email, e.g. you@example.com.");
+    return setErr("bEmail","errEmail","");
+  }
+  function validatePhone(){
+    var v = $("bPhone").value.trim().replace(/[\s\-().+]/g,"");
+    if(!v) return setErr("bPhone","errPhone","Please enter your phone number.");
+    if(/^\d{12}$/.test(v) && v.indexOf("91") === 0) v = v.slice(2);
+    if(!/^[6-9]\d{9}$/.test(v)) return setErr("bPhone","errPhone","Enter a valid 10-digit Indian mobile number.");
+    return setErr("bPhone","errPhone","");
+  }
+  function validateRoom(){
+    var v = $("bRoom").value;
+    if(!v) return setErr("bRoom","errRoom","Please choose a room type.");
+    return setErr("bRoom","errRoom","");
+  }
+  function validateIn(){
+    var v = $("bIn").value;
+    if(!v) return setErr("bIn","errIn","Please choose a check-in date.");
+    if(v < TODAY) return setErr("bIn","errIn","Check-in cannot be in the past.");
+    return setErr("bIn","errIn","");
+  }
+  function validateOut(){
+    var v = $("bOut").value, ci = $("bIn").value;
+    if(!v) return setErr("bOut","errOut","Please choose a check-out date.");
+    if(v < TODAY) return setErr("bOut","errOut","Check-out cannot be in the past.");
+    if(ci && v <= ci) return setErr("bOut","errOut","Check-out must be after check-in.");
+    return setErr("bOut","errOut","");
+  }
+  function validateGuests(){
+    var v = parseInt($("bGuests").value,10);
+    var room = $("bRoom").value;
+    if(!v || v < 1) return setErr("bGuests","errGuests","Please select the number of guests.");
+    if(room && v > CAPS[room]) return setErr("bGuests","errGuests", NAMES[room] + " sleeps a maximum of " + CAPS[room] + (CAPS[room]===1?" guest":" guests.") + ".");
+    return setErr("bGuests","errGuests","");
+  }
+  function validateNotes(){
+    var v = $("bNotes").value.trim();
+    if(!v) return setErr("bNotes","errNotes","Tell us anything we should know (min. 10 characters).");
+    if(v.length < 10) return setErr("bNotes","errNotes","Please add a little more detail (at least 10 characters).");
+    if(v.length > 300) return setErr("bNotes","errNotes","Keep requests under 300 characters.");
+    return setErr("bNotes","errNotes","");
+  }
+
+  var blurMap = {
+    bName: validateName, bEmail: validateEmail, bPhone: validatePhone,
+    bRoom: validateRoom, bIn: function(){ validateIn(); validateOut(); calcSummary(); },
+    bOut: function(){ validateOut(); calcSummary(); },
+    bGuests: validateGuests, bNotes: validateNotes
+  };
+  Object.keys(blurMap).forEach(function(id){
+    $(id).addEventListener("blur", blurMap[id]);
+    $(id).addEventListener("change", blurMap[id]);
+  });
+
+  /* ---------- room cards → prefill ---------- */
+  document.querySelectorAll("[data-room]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var room = btn.getAttribute("data-room");
+      $("bRoom").value = room;
+      var cap = CAPS[room];
+      if(parseInt($("bGuests").value,10) > cap) $("bGuests").value = String(cap);
+      validateRoom(); validateGuests(); calcSummary();
+      $("formCard").classList.remove("flash");
+      void $("formCard").offsetWidth;
+      $("formCard").classList.add("flash");
+      $("book").scrollIntoView({behavior:"smooth"});
+      setTimeout(function(){ $("bName").focus({preventScroll:true}); }, 650);
+    });
+  });
+
+  /* ---------- hero search ---------- */
+  var searchMsg = $("searchMsg");
+  function showSearchMsg(text){
+    searchMsg.textContent = text;
+    searchMsg.classList.add("show");
+  }
+  $("searchForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var ci = $("hIn").value, co = $("hOut").value, g = $("hGuests").value;
+    if(!ci || !co){ showSearchMsg("Please choose both check-in and check-out dates."); return; }
+    if(ci < TODAY){ showSearchMsg("Check-in cannot be in the past."); return; }
+    if(co <= ci){ showSearchMsg("Check-out must be after check-in."); return; }
+    searchMsg.classList.remove("show");
+
+    $("bIn").value = ci;
+    $("bOut").value = co;
+    $("bGuests").value = g;
+    validateIn(); validateOut(); validateGuests(); calcSummary();
+    $("book").scrollIntoView({behavior:"smooth"});
+    setTimeout(function(){
+      $("formCard").classList.remove("flash");
+      void $("formCard").offsetWidth;
+      $("formCard").classList.add("flash");
+    }, 500);
+  });
+  $("hIn").addEventListener("change", function(){
+    if($("hOut").value && $("hOut").value <= $("hIn").value) $("hOut").value = "";
+    $("hOut").min = $("hIn").value || TODAY;
+  });
+
+  /* ---------- booking submit ---------- */
+  $("bookForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var checks = [validateName(), validateEmail(), validatePhone(), validateRoom(),
+                  validateIn(), validateOut(), validateGuests(), validateNotes()];
+    if(checks.indexOf(false) !== -1){
+      var firstBad = document.querySelector(".field.invalid input, .field.invalid select");
+      if(firstBad) firstBad.focus();
+      return;
+    }
+
+    var s = calcSummary();
+    if(!s.rate || !s.datesOk){
+      calcSummary();
+      if(!s.datesOk){ validateOut(); return; }
+    }
+
+    var sub = s.rate * s.n;
+    var tax = Math.round(sub * TAX);
+    var total = sub + tax;
+    var ref = "OYO-VJA-" + Math.floor(1000 + Math.random()*9000);
+
+    $("cRef").textContent = ref;
+    $("cName").textContent = $("bName").value.trim();
+    $("cRoom").textContent = NAMES[s.room] + " — " + inr(s.rate) + "/night";
+    $("cDates").textContent = fmtDate(s.ci) + " → " + fmtDate(s.co) + " · " + s.n + (s.n===1?" night":" nights");
+    $("cGuests").textContent = s.guests + (s.guests==="1" ? " guest" : " guests");
+    $("cTotal").textContent = inr(total) + "  (" + inr(sub) + " + " + inr(tax) + " GST)";
+    $("confirmIntro").textContent = "A copy has been sent to " + $("bEmail").value.trim() + ". Pay at the hotel on arrival.";
+    $("cNotes").textContent = "Special requests: " + $("bNotes").value.trim();
+
+    $("bookForm").style.display = "none";
+    $("confirmPanel").classList.add("show");
+    $("confirmPanel").scrollIntoView({behavior:"smooth", block:"center"});
+  });
+
+  $("againBtn").addEventListener("click", function(){
+    $("bookForm").reset();
+    $("bookForm").style.display = "";
+    $("confirmPanel").classList.remove("show");
+    ["bName","bEmail","bPhone","bRoom","bIn","bOut","bGuests","bNotes"].forEach(function(id){
+      var f = $(id).closest(".field");
+      if(f) f.classList.remove("invalid");
+    });
+    $("bGuests").value = "2";
+    calcSummary();
+    $("bName").focus();
+  });
+
+  /* ---------- reveal on scroll ---------- */
+  if("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* ---------- init ---------- */
+  $("bIn").min = TODAY;
+  $("bOut").min = TODAY;
+  calcSummary();
+})();
+</script>
+</body>
+</html>
